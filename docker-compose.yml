@@ -1,0 +1,21 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: DockerFile
+    container_name: node_backend
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:15
+    container_name: postgres_container
+    ports:
+      - "5445:5445"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: accerl8
