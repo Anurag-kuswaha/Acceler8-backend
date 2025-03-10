@@ -18,7 +18,9 @@ try {
       console.log('error while syncing with database', e);
     }
   })();
-
+    app.get('/status', (req, res)=>{
+      return res.status(200).send({status:'OK'});
+    });
     app.use('/api', resumeRoutes);
     app.use((err, req, res, next) => {
         console.log('error handling endpoint');
