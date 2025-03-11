@@ -10,6 +10,9 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.UUID,
         primaryKey: true,
       },
+      ip: {
+        type: DataTypes.STRING,
+      },
       name: {
         type: DataTypes.STRING,
         allowNull: false,

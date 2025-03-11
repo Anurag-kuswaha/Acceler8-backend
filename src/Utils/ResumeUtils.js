@@ -10,6 +10,7 @@ const Joi = require("joi");
             'string.pattern.base': 'name must be in "<First Name> <Last Name>" format with a single space.',
             'any.required': 'name is required.'
           }),
+        ip:Joi.string(),
         job_title: Joi.string(),
         job_description: Joi.string(),
         job_company: Joi.string(),
