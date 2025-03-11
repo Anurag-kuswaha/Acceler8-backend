@@ -18,7 +18,7 @@ try {
       console.log('error while syncing with database', e);
     }
   })();
-    app.get('/status', (req, res)=>{
+    app.get('/health', (req, res)=>{
       return res.status(200).send({status:'OK'});
     });
     app.use('/api', resumeRoutes);

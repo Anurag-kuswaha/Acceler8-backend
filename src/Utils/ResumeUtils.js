@@ -6,7 +6,7 @@ const Joi = require("joi");
  const ValidateResumeSchema = (resume) => {
     const resumeSchema = Joi.object({
        
-        name: Joi.string().required().pattern(/^[A-Za-z]+ [A-Za-z]+$/).messages({
+        name: Joi.string().required().pattern(/^[a-zA-Z0-9.-]+ [A-Za-z]+$/).messages({
             'string.pattern.base': 'name must be in "<First Name> <Last Name>" format with a single space.',
             'any.required': 'name is required.'
           }),
